@@ -1,20 +1,8 @@
-import {createElement} from '../render.js';
-import {itemTemplate} from './template/itemTemplate.js';
+import {itemTemplate} from './template/item-template.js';
+import BaseView from './baseView.js';
 
-export default class ItemView {
+export default class ItemView extends BaseView{
   getTemplate() {
     return itemTemplate();
-  }
-
-  getElement() {
-    if (!this.element) {
-      this.element = createElement(this.getTemplate());
-    }
-
-    return this.element;
-  }
-
-  removeElement() {
-    this.element = null;
   }
 }

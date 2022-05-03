@@ -1,20 +1,8 @@
-import {createElement} from '../render.js';
-import {listTemplate} from './template/listTemplate.js';
+import {listTemplate} from './template/list-template.js';
+import BaseView from './baseView.js';
 
-export default class ListView {
+export default class ListView extends BaseView {
   getTemplate() {
     return listTemplate();
-  }
-
-  getElement() {
-    if (!this.element) {
-      this.element = createElement(this.getTemplate());
-    }
-
-    return this.element;
-  }
-
-  removeElement() {
-    this.element = null;
   }
 }

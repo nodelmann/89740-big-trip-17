@@ -1,20 +1,8 @@
-import {createElement} from '../render.js';
-import {createFormTemplate} from './template/createFormTemplate.js';
+import {createFormTemplate} from './template/create-form-template.js';
+import BaseView from './baseView.js';
 
-export default class CreateFormView {
+export default class CreateFormView extends BaseView{
   getTemplate() {
     return createFormTemplate();
-  }
-
-  getElement() {
-    if (!this.element) {
-      this.element = createElement(this.getTemplate());
-    }
-
-    return this.element;
-  }
-
-  removeElement() {
-    this.element = null;
   }
 }

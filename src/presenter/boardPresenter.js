@@ -16,7 +16,7 @@ export default class BoardPresenter {
     this.filterContainer = filterContainer;
     this.sortContainer = sortContainer;
 
-    render(new TripInfoView(), this.headerContainer, 'afterbegin');
+    render(new TripInfoView(), this.headerContainer, 'AFTERBEGIN');
     render(new FilterView(), this.filterContainer);
     render(new SortView(), this.sortContainer);
     render(new CreateFormView(), this.sortContainer);

@@ -1,20 +1,8 @@
-import {createElement} from '../render.js';
-import {tripInfoTemplate} from './template/tripInfoTemplate.js';
+import {tripInfoTemplate} from './template/trip-info-template.js';
+import BaseView from './baseView.js';
 
-export default class TripInfoView {
+export default class TripInfoView extends BaseView {
   getTemplate() {
     return tripInfoTemplate();
-  }
-
-  getElement() {
-    if (!this.element) {
-      this.element = createElement(this.getTemplate());
-    }
-
-    return this.element;
-  }
-
-  removeElement() {
-    this.element = null;
   }
 }
